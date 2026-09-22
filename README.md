@@ -62,7 +62,7 @@ GHCR, and Watchtower pulling `:prod`.
 2. Point a DNS A record for `KEY_QC_DOMAIN` at the VPS.
 3. On the VPS, once:
    ```bash
-   git clone https://github.com/sagabeats/key-qc.git && cd key-qc
+   git clone https://github.com/sagabeats/key-qc-engine.git && cd key-qc-engine
    cp .env.example .env
    docker compose pull && docker compose up -d
    ```
