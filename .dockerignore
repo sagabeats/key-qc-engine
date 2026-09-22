@@ -1,0 +1,12 @@
+**/.env
+**/.env.*
+!.env.example
+**/.venv
+**/__pycache__
+**/node_modules
+**/*.log
+.git
+.github
+docker-compose*.yml
+Dockerfile*
+README.md
