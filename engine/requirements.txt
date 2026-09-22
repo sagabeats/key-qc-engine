@@ -1,0 +1,27 @@
+# S-KEY runtime dependencies — pinned.
+#
+# These are the exact versions the Benchmark V1 numbers in benchmark-data/ were
+# produced with. They are pins, not minimums: key detection is a model, and a
+# different torch or nnAudio build is a different engine until it has been
+# re-benchmarked.
+#
+# Upstream declares looser ranges (torch ~2.7, numpy ~2.2, nnAudio 0.3.3,
+# einops 0.8.*, soundfile ^0.13.1, tqdm *). Every pin below satisfies them.
+#
+# CPU only. Key QC runs on the CPU wheels; nothing here pulls CUDA.
+#
+#   python -m pip install -r engine/requirements.txt
+#
+# Dev tooling from the upstream repo (mypy, ruff, pytest, pdbr) is deliberately
+# absent: it is needed to develop S-KEY, not to run it.
+
+torch==2.7.1
+torchaudio==2.7.1
+numpy==2.2.6
+nnAudio==0.3.3
+einops==0.8.1
+soundfile==0.13.1
+tqdm==4.67.1
+
+# Pulled in by nnAudio; pinned so a resolver cannot drift the signal path.
+scipy==1.15.3
